@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#163C2D">
+<meta name="robots" content="noindex">
+<title>Finalizar compra | Rena Encanto</title>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="head"><div class="w">
+  <a href="index.html" aria-label="Voltar à loja"><img src="images/logo-rena-encanto.png" alt="Rena Encanto" width="92" height="46"></a>
+  <div class="hl"><span style="display:flex;gap:6px;align-items:center;color:var(--ok)"><span class="i" data-i="lock" data-s="18"></span>Ambiente seguro</span></div>
+</div></header>
+
+<main class="w">
+<div class="steps"><span class="on"><i>1</i>Dados</span>›<span class="on"><i>2</i>Entrega</span>›<span class="on"><i>3</i>Pagamento</span></div>
+
+<div id="done" class="box done" hidden></div>
+
+<form class="co" id="form" novalidate>
+  <div>
+    <section class="box"><h2><b>1</b>Seus dados</h2><div class="f">
+      <label>Nome completo<input name="nome" autocomplete="name" required><span class="err">Informe nome e sobrenome.</span></label>
+      <label>E-mail<input name="email" type="email" autocomplete="email" inputmode="email" required><span class="err">E-mail inválido.</span></label>
+      <label class="s3">CPF<input name="cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required><span class="err">CPF inválido.</span></label>
+      <label class="s3">Celular com DDD<input name="tel" type="tel" autocomplete="tel" inputmode="numeric" maxlength="15" placeholder="(31) 90000-0000" required><span class="err">Celular inválido.</span></label>
+    </div></section>
+
+    <section class="box"><h2><b>2</b>Entrega</h2><div class="f">
+      <label class="s2">CEP<input name="cep" autocomplete="postal-code" inputmode="numeric" maxlength="9" placeholder="00000-000" required><span class="err">CEP inválido.</span></label>
+      <label class="s4">Rua<input name="rua" autocomplete="address-line1" required><span class="err">Obrigatório.</span></label>
+      <label class="s2">Número<input name="numero" required><span class="err">Obrigatório.</span></label>
+      <label class="s4">Complemento (opcional)<input name="comp"></label>
+      <label class="s3">Bairro<input name="bairro" required><span class="err">Obrigatório.</span></label>
+      <label class="s2">Cidade<input name="cidade" required><span class="err">Obrigatório.</span></label>
+      <label class="s1" style="grid-column:span 1">UF<input name="uf" maxlength="2" required style="text-transform:uppercase"><span class="err">UF.</span></label>
+    </div></section>
+
+    <section class="box"><h2><b>3</b>Pagamento</h2><div class="pm">
+      <label><input type="radio" name="pg" value="pix" checked><span class="i" data-i="pix"></span><span>Pix<small>Aprovação imediata</small></span></label>
+      <label><input type="radio" name="pg" value="cartao"><span class="i" data-i="card"></span><span>Cartão de crédito<small id="parcTxt">Dados digitados no ambiente seguro do gateway</small></span></label>
+      <label><input type="radio" name="pg" value="boleto"><span class="i" data-i="boleto"></span><span>Boleto<small>Aprovação em até 3 dias úteis</small></span></label>
+    </div></section>
+    <button class="btn" id="fin" type="submit"><span class="i" data-i="lock" data-s="20"></span>Finalizar compra</button>
+    <p style="font-size:12px;color:var(--mut);text-align:center">Seus dados são usados apenas para processar o pedido e a entrega.</p>
+  </div>
+
+  <aside class="box sum"><h2 style="margin-bottom:14px">Resumo do pedido</h2>
+    <div class="it"><img id="pimg" alt="" width="64" height="64"><div><b id="pnome"></b><div style="font-size:13px;color:var(--mut)" id="pq"></div></div></div>
+    <div class="row"><span>Subtotal</span><span id="sub"></span></div>
+    <div class="row"><span>Frete</span><span class="ok">Grátis</span></div>
+    <div class="row t"><span>Total</span><span id="tot"></span></div>
+  </aside>
+</form>
+</main>
+
+<script src="js/icons.js"></script>
+<script src="js/config.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
