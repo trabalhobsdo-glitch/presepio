@@ -15,10 +15,11 @@ if(C.prazoSedex)$('sedexTxt').textContent='Entrega em '+C.prazoSedex;
 
 function show(){
   const f=ship==='sedex'?C.sedexPreco:0,sub=C.preco*qty;
-  $('qtd').textContent=qty;$('resumo').textContent=qty+' × '+C.produto;$('sub').textContent=brl(sub);
+  $('qtd').textContent=qty;$('rc').textContent=qty;$('pprice').textContent=brl(sub);$('resumo').textContent='Produtos';$('sub').textContent=brl(sub);
   $('fnome').textContent='Frete '+ship.toUpperCase();
   const fv=$('fval');fv.textContent=f?brl(f):'Grátis';fv.className=f?'':'ok';
   $('tot').textContent=brl(sub+f);
+  $('parc').textContent=C.parcelasSemJuros>1?'ou em até '+C.parcelasSemJuros+'x de '+brl((sub+f)/C.parcelasSemJuros)+' sem juros no cartão':'';
   try{localStorage.setItem('re_qty',qty)}catch(e){}
 }
 show();
