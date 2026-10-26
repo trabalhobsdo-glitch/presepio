@@ -61,7 +61,7 @@ h1{font-size:24px;line-height:1.25;margin:0 0 14px}
 table.sp{width:100%;border-collapse:collapse;font-size:14px}.sp td{padding:11px 14px}.sp tr:nth-child(odd){background:#f7f5ef}.sp td:first-child{font-weight:700;width:38%}
 details{border-bottom:1px solid var(--line);padding:16px 2px}summary{cursor:pointer;font-weight:700}details p{color:#46564c;margin:10px 0 0}
 .foot{background:var(--g);color:#d9e2d9;text-align:center;padding:36px 16px 40px;margin-top:40px;font-size:13px}
-.foot img{height:50px;width:auto;margin:0 auto 10px;filter:brightness(0) invert(1)}
+.foot img{height:50px;width:auto;margin:0 auto 10px}
 .mbuy{display:none}
 /* checkout */
 .steps{display:flex;gap:8px;justify-content:center;margin:22px 0;font-size:13px;font-weight:700;color:var(--mut)}
