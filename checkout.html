@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#163C2D">
+<meta name="robots" content="noindex">
+<title>Finalizar compra | Rena Encanto</title>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="head"><div class="w">
+  <a href="index.html" aria-label="Voltar à loja"><img src="images/logo-rena-encanto.png" alt="Rena Encanto" width="92" height="46"></a>
+  <div class="hl"><span style="display:flex;gap:6px;align-items:center;color:var(--ok)"><span class="i" data-i="lock" data-s="18"></span>Ambiente seguro</span></div>
+</div></header>
+
+<main class="w">
+<div class="steps"><span class="on"><i>1</i>Revisar pedido</span>›<span><i>2</i>Dados e pagamento</span></div>
+<div class="co">
+  <section class="box">
+    <h2><b>1</b>Revise seu pedido</h2>
+    <div class="it" style="display:flex;gap:14px;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)">
+      <img id="pimg" alt="" width="84" height="84" style="width:84px;height:84px;border-radius:8px;object-fit:cover">
+      <div style="flex:1"><b id="pnome"></b><div class="ok" style="font-size:13px">Frete grátis</div></div>
+      <div class="q"><button type="button" id="menos" aria-label="Diminuir">−</button><output id="qtd">1</output><button type="button" id="mais" aria-label="Aumentar">+</button></div>
+    </div>
+    <div class="seller">
+      <div><span class="i" data-i="pix" data-s="18"></span><span>Na próxima etapa você escolhe como pagar e informa seus dados e o endereço de entrega.</span></div>
+      <div><span class="i" data-i="lock" data-s="18"></span><span>O pagamento é feito no ambiente seguro da <b>Pagou</b>. Seus dados de cartão não passam por este site.</span></div>
+    </div>
+    <p id="erro" role="alert" style="color:var(--r);font-weight:700;font-size:14px;min-height:20px;margin:12px 0 0"></p>
+    <button class="btn" id="fin" type="button" style="margin-top:8px"><span class="i" data-i="lock" data-s="20"></span><span id="finTxt">Ir para o pagamento</span></button>
+    <a class="btn wa" id="wa" hidden target="_blank" rel="noopener">Falar com a gente no WhatsApp</a>
+  </section>
+  <aside class="box sum"><h2 style="margin:0 0 14px;font-size:18px">Resumo do pedido</h2>
+    <div class="row"><span id="resumo">Produto</span><span id="sub"></span></div>
+    <div class="row"><span>Frete</span><span class="ok">Grátis</span></div>
+    <div class="row t"><span>Total</span><span id="tot"></span></div>
+    <p style="font-size:12px;color:var(--mut);margin:10px 0 0">Pagamento por Pix ou cartão de crédito.</p>
+  </aside>
+</div>
+</main>
+
+<script src="js/icons.js"></script>
+<script src="js/config.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
