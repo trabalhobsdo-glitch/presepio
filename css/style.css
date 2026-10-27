@@ -93,3 +93,5 @@ input.bad{border-color:var(--r)}.err{color:var(--r);font-size:12px;font-weight:5
 .mbuy strong{font-size:22px;color:var(--g);display:block;line-height:1}.mbuy small{font-size:11px;color:var(--ok);font-weight:700}.mbuy .btn{padding:14px}
 .foot{padding-bottom:90px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.cor{height:22px;width:auto;flex-shrink:0;display:inline-block;vertical-align:middle}.cor-lg{height:28px}
